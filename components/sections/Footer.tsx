@@ -60,9 +60,9 @@ export default function Footer() {
               <Image 
                 src="/logokreativ.png" 
                 alt="KreativLabs.id" 
-                width={60} 
-                height={60}
-                className="w-16 h-16 object-contain"
+                width={80} 
+                height={80}
+                className="h-20 w-auto"
               />
             </div>
             <p className="text-white/70 text-sm mb-6 leading-relaxed">

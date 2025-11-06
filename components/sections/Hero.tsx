@@ -2,35 +2,15 @@
 
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Sparkles, Code2, Palette } from "lucide-react";
+import { AuroraBackground } from "@/components/ui/shadcn-io/aurora-background";
+import { Particles } from "@/components/ui/shadcn-io/particles";
+import { useIsMobile } from "@/hooks/useIsMobile";
 
 export default function Hero() {
+  const isMobile = useIsMobile();
+  
   return (
-    <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden bg-[#0A192F] pt-20">
-      {/* Aurora Background Effect */}
-      <div className="absolute inset-0 overflow-hidden">
-        {/* Base gradient */}
-        <div className="absolute inset-0 bg-gradient-to-br from-[#0A192F] via-[#0F1E37] to-[#0A192F]"></div>
-        
-        {/* Aurora layers */}
-        <div className="absolute top-0 left-0 right-0 h-full">
-          {/* Aurora 1 - Blue */}
-          <div className="absolute top-[-50%] left-[-10%] w-[80%] h-[80%] bg-[#3B82F6] rounded-full mix-blend-multiply filter blur-[120px] opacity-20 animate-aurora-1"></div>
-          
-          {/* Aurora 2 - Cyan */}
-          <div className="absolute top-[-30%] right-[-10%] w-[70%] h-[70%] bg-[#06B6D4] rounded-full mix-blend-multiply filter blur-[120px] opacity-20 animate-aurora-2"></div>
-          
-          {/* Aurora 3 - Purple */}
-          <div className="absolute bottom-[-40%] left-[20%] w-[60%] h-[60%] bg-[#8B5CF6] rounded-full mix-blend-multiply filter blur-[120px] opacity-15 animate-aurora-3"></div>
-          
-          {/* Aurora 4 - Blue accent */}
-          <div className="absolute top-[40%] right-[10%] w-[50%] h-[50%] bg-[#3B82F6] rounded-full mix-blend-multiply filter blur-[100px] opacity-25 animate-aurora-4"></div>
-        </div>
-
-        {/* Overlay gradient for depth */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#0A192F] via-transparent to-transparent"></div>
-      </div>
-
-      {/* Content */}
+    <AuroraBackground className="min-h-[85vh] pt-20">
       <div className="relative z-10 container mx-auto px-6 py-16">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
@@ -124,6 +104,18 @@ export default function Hero() {
           </div>
         </div>
       </div>
-    </section>
+      
+      {/* Interactive Particles - Desktop Only */}
+      {!isMobile && (
+        <Particles
+          className="absolute inset-0"
+          quantity={100}
+          ease={80}
+          staticity={50}
+          color="#3B82F6"
+          size={0.8}
+        />
+      )}
+    </AuroraBackground>
   );
 }

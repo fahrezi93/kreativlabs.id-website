@@ -3,6 +3,7 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Check } from "lucide-react";
+import OptimizedParticles from "@/components/OptimizedParticles";
 
 const pricingPlans = [
   {
@@ -139,6 +140,9 @@ export default function Pricing() {
           </p>
         </div>
       </div>
+      
+      {/* Interactive Particles - Desktop Only */}
+      <OptimizedParticles quantity={50} />
     </section>
   );
 }

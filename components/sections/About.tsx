@@ -1,6 +1,7 @@
 "use client";
 
-import { Users, Target, Award } from "lucide-react";
+import { Users, Target, Award, TrendingUp } from "lucide-react";
+import OptimizedParticles from "@/components/OptimizedParticles";
 
 const stats = [
   {
@@ -87,6 +88,9 @@ export default function About() {
           </div>
         </div>
       </div>
+      
+      {/* Interactive Particles - Desktop Only */}
+      <OptimizedParticles quantity={50} />
     </section>
   );
 }

@@ -10,19 +10,32 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 
 export const metadata: Metadata = {
   title: "KreativLabs.id - Jasa Pembuatan Website & Design Profesional",
-  description: "KreativLabs.id menyediakan jasa pembuatan website dan design profesional untuk bisnis Anda. Solusi digital modern, minimalis, dan berkualitas tinggi.",
-  keywords: ["jasa website", "web development", "ui ux design", "pembuatan website", "design website", "kreativlabs"],
+  description:
+    "Jasa pembuatan website profesional, UI/UX design, dan digital marketing. Wujudkan website impian Anda bersama KreativLabs.id",
+  keywords:
+    "jasa website, web development, UI/UX design, digital marketing, pembuatan website, jasa design",
   authors: [{ name: "KreativLabs.id" }],
+  icons: {
+    icon: [
+      { url: '/favicon.ico' },
+      { url: '/icon.png', type: 'image/png', sizes: '32x32' },
+    ],
+    apple: '/apple-icon.png',
+  },
   openGraph: {
     title: "KreativLabs.id - Jasa Pembuatan Website & Design Profesional",
-    description: "Solusi digital modern untuk bisnis Anda",
-    type: "website",
+    description:
+      "Jasa pembuatan website profesional, UI/UX design, dan digital marketing",
+    url: "https://kreativlabs.id",
+    siteName: "KreativLabs.id",
     locale: "id_ID",
+    type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "KreativLabs.id - Jasa Pembuatan Website & Design",
-    description: "Solusi digital modern untuk bisnis Anda",
+    title: "KreativLabs.id - Jasa Pembuatan Website & Design Profesional",
+    description:
+      "Jasa pembuatan website profesional, UI/UX design, dan digital marketing",
   },
 };
 

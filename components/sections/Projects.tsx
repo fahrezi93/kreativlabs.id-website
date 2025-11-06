@@ -2,31 +2,33 @@
 
 import { Card } from "@/components/ui/card";
 import { ExternalLink } from "lucide-react";
+import OptimizedParticles from "@/components/OptimizedParticles";
+import Image from "next/image";
 
 const projects = [
   {
     title: "E-Commerce Platform",
     category: "Web Development",
     description: "Platform e-commerce modern dengan fitur lengkap dan user-friendly",
-    image: "/api/placeholder/400/300",
+    image: "https://images.unsplash.com/photo-1557821552-17105176677c?w=800&h=600&fit=crop&q=80",
   },
   {
     title: "Corporate Website",
     category: "Web Design",
     description: "Website perusahaan profesional dengan desain minimalis dan elegan",
-    image: "/api/placeholder/400/300",
+    image: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&h=600&fit=crop&q=80",
   },
   {
     title: "Mobile App Design",
     category: "UI/UX Design",
     description: "Desain aplikasi mobile yang intuitif dan modern",
-    image: "/api/placeholder/400/300",
+    image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&h=600&fit=crop&q=80",
   },
   {
     title: "Landing Page",
     category: "Web Development",
     description: "Landing page dengan konversi tinggi untuk bisnis digital",
-    image: "/api/placeholder/400/300",
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop&q=80",
   },
 ];
 
@@ -56,12 +58,16 @@ export default function Projects() {
             >
               {/* Project Image */}
               <div className="relative h-64 bg-[#1E3A5F] overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-[#3B82F6]/20 to-transparent"></div>
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-32 h-32 bg-[#3B82F6]/20 rounded-full blur-xl"></div>
-                </div>
-                <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity">
-                  <div className="bg-[#3B82F6] p-2 rounded-full">
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-110"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0F1E37] via-transparent to-transparent opacity-60"></div>
+                <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity z-10">
+                  <div className="bg-[#3B82F6] p-2 rounded-full shadow-lg">
                     <ExternalLink className="w-5 h-5 text-white" />
                   </div>
                 </div>
@@ -83,6 +89,9 @@ export default function Projects() {
           ))}
         </div>
       </div>
+      
+      {/* Interactive Particles - Desktop Only */}
+      <OptimizedParticles quantity={50} />
     </section>
   );
 }

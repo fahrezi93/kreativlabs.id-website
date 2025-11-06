@@ -36,15 +36,16 @@ export default function Navbar() {
       }`}
     >
       <div className="container mx-auto px-6">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-20 relative">
           {/* Logo - Left */}
-          <a href="#" className="flex items-center">
+          <a href="#" className="flex items-center z-10">
             <Image 
               src="/logokreativ.png" 
               alt="KreativLabs.id" 
-              width={50} 
-              height={50}
-              className="w-12 h-12 object-contain"
+              width={40} 
+              height={40}
+              className="h-10 w-auto"
+              priority
             />
           </a>
 
@@ -71,8 +72,9 @@ export default function Navbar() {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-white absolute right-0"
+            className="md:hidden text-white z-10 p-2 hover:bg-white/10 rounded-lg transition-colors"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            aria-label="Toggle menu"
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -80,20 +82,26 @@ export default function Navbar() {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden py-4 bg-[#0A192F]/95 backdrop-blur-xl rounded-b-2xl">
-            <div className="flex flex-col space-y-4">
-              {navLinks.map((link) => (
+          <div className="md:hidden py-6 bg-[#0A192F]/98 backdrop-blur-xl rounded-b-2xl border-t border-white/5 animate-in slide-in-from-top-5 duration-300">
+            <div className="flex flex-col space-y-1">
+              {navLinks.map((link, index) => (
                 <a
                   key={link.name}
                   href={link.href}
-                  className="text-white/80 hover:text-[#3B82F6] transition-colors text-sm font-medium px-4 py-2"
+                  className="text-white hover:text-[#3B82F6] hover:bg-white/5 transition-all text-base font-medium px-6 py-3 rounded-lg mx-2"
                   onClick={() => setIsMobileMenuOpen(false)}
+                  style={{
+                    animationDelay: `${index * 50}ms`,
+                  }}
                 >
                   {link.name}
                 </a>
               ))}
-              <div className="px-4">
-                <Button className="bg-[#3B82F6] hover:bg-[#3B82F6]/90 text-white w-full rounded-full">
+              <div className="px-4 pt-4 mt-2 border-t border-white/5">
+                <Button 
+                  className="bg-[#3B82F6] hover:bg-[#3B82F6]/90 text-white w-full rounded-full py-6 text-base font-medium shadow-lg shadow-[#3B82F6]/30"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
                   Get Started
                 </Button>
               </div>

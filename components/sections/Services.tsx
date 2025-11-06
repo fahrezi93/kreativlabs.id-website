@@ -1,7 +1,8 @@
 "use client";
 
 import { Card } from "@/components/ui/card";
-import { Code, Palette, Smartphone, Rocket, Search, ShoppingCart } from "lucide-react";
+import { Code, Palette, Megaphone, Smartphone, Globe, Zap, ShoppingCart, Search, Rocket } from "lucide-react";
+import OptimizedParticles from "@/components/OptimizedParticles";
 
 const services = [
   {
@@ -98,6 +99,9 @@ export default function Services() {
           })}
         </div>
       </div>
+      
+      {/* Interactive Particles - Desktop Only */}
+      <OptimizedParticles quantity={50} />
     </section>
   );
 }

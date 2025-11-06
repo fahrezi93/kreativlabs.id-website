@@ -40,6 +40,15 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
+  --animate-aurora: aurora 60s linear infinite;
+  @keyframes aurora {
+    from {
+      background-position: 50% 50%, 50% 50%;
+    }
+    to {
+      background-position: 350% 50%, 350% 50%;
+    }
+  }
 }
 
 :root {
@@ -153,18 +162,18 @@
   .delay-1000 {
     animation-delay: 1s;
   }
-  
+
   .delay-2000 {
     animation-delay: 2s;
   }
-  
+
   .text-gradient {
     background: linear-gradient(to right, #3B82F6, #60A5FA);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
-  
+
   .glow-blue {
     box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
   }
