@@ -1,0 +1,86 @@
+"use client";
+
+import { Zap, Shield, Heart, TrendingUp } from "lucide-react";
+
+const principles = [
+  {
+    icon: Zap,
+    title: "Fast & Efficient",
+    description: "Kami mengutamakan kecepatan dan efisiensi dalam setiap project yang dikerjakan",
+  },
+  {
+    icon: Shield,
+    title: "Quality First",
+    description: "Kualitas adalah prioritas utama kami dalam menghasilkan produk digital",
+  },
+  {
+    icon: Heart,
+    title: "Client Satisfaction",
+    description: "Kepuasan klien adalah tujuan kami, dengan komunikasi yang transparan",
+  },
+  {
+    icon: TrendingUp,
+    title: "Continuous Innovation",
+    description: "Selalu mengikuti perkembangan teknologi terbaru untuk hasil yang optimal",
+  },
+];
+
+export default function Principles() {
+  return (
+    <section className="relative py-24 bg-[#0A192F] overflow-hidden">
+      {/* Lighting Effects */}
+      <div className="absolute top-1/2 right-0 w-96 h-96 bg-[#3B82F6] rounded-full blur-[120px] opacity-10"></div>
+
+      <div className="container mx-auto px-6 relative z-10">
+        {/* Section Header */}
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+            Engineering <span className="text-[#3B82F6]">Principles</span>
+          </h2>
+          <p className="text-white/70 text-lg max-w-2xl mx-auto">
+            Prinsip-prinsip yang kami pegang dalam setiap project
+          </p>
+        </div>
+
+        {/* Principles Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
+          {principles.map((principle, index) => {
+            const Icon = principle.icon;
+            return (
+              <div
+                key={index}
+                className="group text-center"
+              >
+                {/* Icon Container */}
+                <div className="relative mb-6 inline-block">
+                  {/* Glow Effect */}
+                  <div className="absolute inset-0 bg-[#3B82F6] rounded-full blur-xl opacity-0 group-hover:opacity-30 transition-opacity duration-300"></div>
+                  
+                  {/* Icon */}
+                  <div className="relative w-20 h-20 bg-[#0F1E37] border-2 border-[#3B82F6]/30 rounded-full flex items-center justify-center group-hover:border-[#3B82F6] transition-all duration-300">
+                    <Icon className="w-10 h-10 text-[#3B82F6]" />
+                  </div>
+                </div>
+
+                {/* Title */}
+                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-[#3B82F6] transition-colors">
+                  {principle.title}
+                </h3>
+
+                {/* Description */}
+                <p className="text-white/70 text-sm leading-relaxed">
+                  {principle.description}
+                </p>
+              </div>
+            );
+          })}
+        </div>
+
+        {/* Bottom Divider */}
+        <div className="mt-16 flex items-center justify-center">
+          <div className="h-px w-32 bg-gradient-to-r from-transparent via-[#3B82F6] to-transparent"></div>
+        </div>
+      </div>
+    </section>
+  );
+}
