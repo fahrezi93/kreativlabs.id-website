@@ -17,7 +17,7 @@ export default function Hero() {
       {!isMobile && <BackgroundBeams className="absolute inset-0" />}
       
       {/* Gradient overlay for better text readability */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#0A192F]/50 via-transparent to-[#0A192F]/80 pointer-events-none" />
+      <div className="absolute inset-0 bg-linear-to-b from-[#0A192F]/50 via-transparent to-[#0A192F]/80 pointer-events-none" />
       
       <div className="relative z-10 container mx-auto px-6 py-16">
         <div className="max-w-6xl mx-auto">
@@ -80,7 +80,7 @@ export default function Hero() {
               {/* Feature 1 */}
               <FadeInStagger index={0} delay={200}>
                 <div className="group relative bg-[#0F1E37]/50 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-[#0F1E37]/80 hover:border-[#3B82F6]/50 transition-all duration-300 hover:-translate-y-1">
-                  <div className="absolute inset-0 bg-gradient-to-br from-[#3B82F6]/10 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                  <div className="absolute inset-0 bg-linear-to-br from-[#3B82F6]/10 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
                   <div className="relative flex flex-col items-center text-center">
                     <div className="w-14 h-14 bg-[#3B82F6]/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-[#3B82F6]/20 group-hover:scale-110 transition-all duration-300">
                       <Code2 className="w-7 h-7 text-[#3B82F6]" />
@@ -94,7 +94,7 @@ export default function Hero() {
               {/* Feature 2 */}
               <FadeInStagger index={1} delay={200}>
                 <div className="group relative bg-[#0F1E37]/50 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-[#0F1E37]/80 hover:border-[#3B82F6]/50 transition-all duration-300 hover:-translate-y-1">
-                  <div className="absolute inset-0 bg-gradient-to-br from-[#3B82F6]/10 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                  <div className="absolute inset-0 bg-linear-to-br from-[#3B82F6]/10 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
                   <div className="relative flex flex-col items-center text-center">
                     <div className="w-14 h-14 bg-[#3B82F6]/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-[#3B82F6]/20 group-hover:scale-110 transition-all duration-300">
                       <Palette className="w-7 h-7 text-[#3B82F6]" />
@@ -108,7 +108,7 @@ export default function Hero() {
               {/* Feature 3 */}
               <FadeInStagger index={2} delay={200}>
                 <div className="group relative bg-[#0F1E37]/50 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-[#0F1E37]/80 hover:border-[#3B82F6]/50 transition-all duration-300 hover:-translate-y-1">
-                  <div className="absolute inset-0 bg-gradient-to-br from-[#3B82F6]/10 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                  <div className="absolute inset-0 bg-linear-to-br from-[#3B82F6]/10 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
                   <div className="relative flex flex-col items-center text-center">
                     <div className="w-14 h-14 bg-[#3B82F6]/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-[#3B82F6]/20 group-hover:scale-110 transition-all duration-300">
                       <Sparkles className="w-7 h-7 text-[#3B82F6]" />

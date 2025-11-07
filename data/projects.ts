@@ -22,9 +22,9 @@ export const projects: Project[] = [
     id: "ecommerce-platform",
     title: "E-Commerce Platform",
     category: "Web Development",
-    description: "Platform e-commerce modern dengan fitur lengkap dan user-friendly",
+    description: "Platform e-commerce Thrifting dengan fitur lengkap dan performa tinggi",
     image: "/ecommerce.png",
-    fullDescription: "Platform e-commerce lengkap yang dirancang untuk meningkatkan penjualan online dengan pengalaman pengguna yang optimal. Sistem ini dilengkapi dengan manajemen produk, keranjang belanja, sistem pembayaran terintegrasi, dan dashboard admin yang powerful.",
+    fullDescription: "Platform e-commerce Thrifting yang dirancang untuk memberikan pengalaman berbelanja yang optimal dengan fitur-fitur canggih dan performa tinggi.",
     challenge: "Klien membutuhkan platform e-commerce yang dapat menangani ribuan produk dengan performa tinggi, sistem pembayaran yang aman, dan dashboard admin yang mudah digunakan untuk mengelola inventori dan pesanan.",
     solution: "Kami mengembangkan platform menggunakan Next.js untuk performa optimal, dengan integrasi payment gateway, sistem manajemen produk yang scalable, dan dashboard admin yang intuitif. Implementasi caching dan optimasi database memastikan loading time yang cepat.",
     results: [
@@ -47,9 +47,9 @@ export const projects: Project[] = [
     client: "Toko Online Indonesia",
     year: "2024",
     gallery: [
-      "/ecommerce.png",
-      "/ecommerce.png",
-      "/ecommerce.png"
+      "/ecommerce1.png",
+      "/ecommerce2.png",
+      "/ecommerce3.png"
     ],
     features: [
       "Manajemen Produk & Kategori",
@@ -91,9 +91,9 @@ export const projects: Project[] = [
     client: "PT Maju Bersama",
     year: "2024",
     gallery: [
-      "/companyprofile.png",
-      "/companyprofile.png",
-      "/companyprofile.png"
+      "/company1.png",
+      "/company2.png",
+      "/company3.png"
     ],
     features: [
       "Responsive Design",
@@ -107,12 +107,12 @@ export const projects: Project[] = [
     ]
   },
   {
-    id: "website chat",
-    title: "Website Chatly untuk Chat",
+    id: "chatly",
+    title: "Website Chatly",
     category: "Fullstack Web Development",
-    description: "Website chat untuk Chatly",
+    description: "Website chat real-time untuk Chatly dengan fitur modern",
     image: "/chatly.png",
-    fullDescription: "Website chat untuk Chatly",
+    fullDescription: "Website chat real-time untuk Chatly dengan interface yang modern dan fitur lengkap untuk komunikasi yang efisien.",
     challenge: "Website harus mudah digunakan oleh berbagai kalangan usia, dengan interface yang menarik namun tidak overwhelming. Perlu balance antara fitur lengkap dengan simplicity.",
     solution: "Kami melakukan user research mendalam, membuat user persona, dan iterasi design berdasarkan feedback. Menggunakan design system yang konsisten dan mengikuti best practices mobile UI/UX.",
     results: [
@@ -140,9 +140,8 @@ export const projects: Project[] = [
     client: "Chatly",
     year: "2025",
     gallery: [
-      "/chatly.png",
-      "/chatly.png",
-      "/chatly.png"
+      "/chatly1.png",
+      "/chatly2.png",
     ],
     features: [
       "User Research & Persona",
@@ -184,9 +183,9 @@ export const projects: Project[] = [
     client: "PT. Top Up Game",
     year: "2025",
     gallery: [
-      "/topupgame.png",
-      "/topupgame.png",
-      "/topupgame.png"
+      "/topupgame1.png",
+      "/topupgame2.png",
+      "/topupgame3.png"
     ],
     features: [
       "Conversion Optimized",
@@ -204,7 +203,7 @@ export const projects: Project[] = [
     title: "Aplikasi Kasir Web Modern",
     category: "Web Application",
     description: "Sistem kasir berbasis web yang powerful untuk mengelola bisnis retail Anda",
-    image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1200&h=800&fit=crop",
+    image: "/cashier.png",
     fullDescription: "Aplikasi kasir web modern yang dirancang khusus untuk membantu bisnis retail, toko, restoran, dan UMKM dalam mengelola transaksi penjualan dengan lebih efisien. Dilengkapi dengan fitur lengkap mulai dari manajemen produk, stok, laporan penjualan real-time, hingga integrasi dengan berbagai metode pembayaran.",
     challenge: "Banyak bisnis UMKM masih menggunakan sistem manual atau aplikasi kasir yang rumit dan mahal. Mereka membutuhkan solusi yang mudah digunakan, terjangkau, dapat diakses dari mana saja, dan memiliki fitur lengkap untuk mengelola bisnis mereka.",
     solution: "Kami mengembangkan aplikasi kasir berbasis web yang dapat diakses dari browser tanpa perlu instalasi. Sistem ini dilengkapi dengan interface yang intuitif, fitur multi-user, laporan real-time, dan dapat diakses dari berbagai perangkat. Teknologi cloud memastikan data aman dan selalu ter-backup.",
@@ -230,9 +229,8 @@ export const projects: Project[] = [
     client: "Kreativ Labs",
     year: "2025",
     gallery: [
-      "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1200&h=800&fit=crop",
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=800&fit=crop",
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&h=800&fit=crop"
+      "/cashier1.png",
+      "/cashier2.png",
     ],
     features: [
       "Point of Sale (POS) Modern",

@@ -1,6 +1,6 @@
 "use client";
 
-import { Users, Target, Award, TrendingUp, Code2, Palette, Zap } from "lucide-react";
+import { Users, Target, Award, Code2, Palette, Zap } from "lucide-react";
 import OptimizedParticles from "@/components/OptimizedParticles";
 import AnimatedSection from "@/components/AnimatedSection";
 import Image from "next/image";
@@ -8,18 +8,18 @@ import Image from "next/image";
 const stats = [
   {
     icon: Users,
-    value: "50+",
-    label: "Happy Clients",
+    value: "10+",
+    label: "Klien Puas",
   },
   {
     icon: Target,
-    value: "100+",
-    label: "Projects Done",
+    value: "10+",
+    label: "Proyek Selesai",
   },
   {
     icon: Award,
-    value: "5+",
-    label: "Years Experience",
+    value: "2+",
+    label: "Pengalaman Bulan",
   },
 ];
 
@@ -36,7 +36,7 @@ export default function About() {
             <AnimatedSection animation="fade-right">
               <div>
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                About <span className="text-[#3B82F6]">Us</span>
+                Tentang <span className="text-[#3B82F6]">Kami</span>
               </h2>
               <p className="text-white/70 text-lg mb-6 leading-relaxed">
                 KreativLabs.id adalah agensi digital yang berfokus pada pembuatan website dan design yang modern, minimalis, dan profesional.
@@ -86,7 +86,7 @@ export default function About() {
                       loading="lazy"
                     />
                     {/* Overlay Gradient */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-[#3B82F6]/20 via-transparent to-[#0A192F]/40"></div>
+                    <div className="absolute inset-0 bg-linear-to-br from-[#3B82F6]/20 via-transparent to-[#0A192F]/40"></div>
                   </div>
 
                   {/* Floating Icon Cards */}

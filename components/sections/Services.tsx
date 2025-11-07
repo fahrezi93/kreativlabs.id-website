@@ -57,7 +57,7 @@ export default function Services() {
         <AnimatedSection animation="fade-up">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-              Our <span className="text-[#3B82F6]">Services</span>
+              Layanan <span className="text-[#3B82F6]">Kami</span>
             </h2>
             <p className="text-white/70 text-lg max-w-2xl mx-auto">
               Solusi lengkap Website Development & Graphic Design untuk kebutuhan bisnis Anda

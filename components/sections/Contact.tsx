@@ -120,7 +120,7 @@ export default function Contact() {
                     className="bg-[#0F1E37] border-white/10 p-6 hover:border-[#3B82F6]/50 transition-all duration-300"
                   >
                     <div className="flex items-start space-x-4">
-                      <div className="flex-shrink-0 w-12 h-12 bg-[#3B82F6]/10 rounded-lg flex items-center justify-center">
+                      <div className="shrink-0 w-12 h-12 bg-[#3B82F6]/10 rounded-lg flex items-center justify-center">
                         <Icon className="w-6 h-6 text-[#3B82F6]" />
                       </div>
                       <div>

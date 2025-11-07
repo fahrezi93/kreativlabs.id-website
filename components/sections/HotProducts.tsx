@@ -10,7 +10,7 @@ import Link from "next/link";
 
 export default function HotProducts() {
   return (
-    <section id="hot-products" className="relative py-24 bg-gradient-to-b from-[#0A192F] to-[#0F1E37] overflow-hidden">
+    <section id="hot-products" className="relative py-24 bg-linear-to-b from-[#0A192F] to-[#0F1E37] overflow-hidden">
       {/* Animated Background Elements */}
       <div className="absolute top-20 left-10 w-72 h-72 bg-[#3B82F6] rounded-full blur-[100px] opacity-20 animate-pulse"></div>
       <div className="absolute bottom-20 right-10 w-96 h-96 bg-[#F59E0B] rounded-full blur-[120px] opacity-15 animate-pulse"></div>
@@ -19,12 +19,12 @@ export default function HotProducts() {
         {/* Section Header */}
         <AnimatedSection animation="fade-up">
           <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#F59E0B]/20 to-[#EF4444]/20 border border-[#F59E0B]/30 rounded-full mb-6 backdrop-blur-sm">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-linear-to-r from-[#F59E0B]/20 to-[#EF4444]/20 border border-[#F59E0B]/30 rounded-full mb-6 backdrop-blur-sm">
               <Flame className="w-5 h-5 text-[#F59E0B] animate-pulse" />
               <span className="text-sm text-white font-semibold">HOT PRODUCT 🔥</span>
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-              Produk <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#F59E0B] to-[#EF4444]">Unggulan</span> Kami
+              Produk <span className="text-transparent bg-clip-text bg-linear-to-r from-[#F59E0B] to-[#EF4444]">Unggulan</span> Kami
             </h2>
             <p className="text-white/70 text-lg max-w-2xl mx-auto">
               Solusi terbaik untuk bisnis Anda dengan teknologi terkini
@@ -35,7 +35,7 @@ export default function HotProducts() {
         {/* Hot Product Card */}
         <div className="max-w-5xl mx-auto">
           <FadeInStagger index={0} delay={100}>
-            <Card className="group bg-gradient-to-br from-[#0F1E37] to-[#1E3A5F] border-2 border-[#F59E0B]/30 hover:border-[#F59E0B]/60 transition-all duration-500 overflow-hidden shadow-2xl shadow-[#F59E0B]/20">
+            <Card className="group bg-linear-to-br from-[#0F1E37] to-[#1E3A5F] border-2 border-[#F59E0B]/30 hover:border-[#F59E0B]/60 transition-all duration-500 overflow-hidden shadow-2xl shadow-[#F59E0B]/20">
               <div className="grid md:grid-cols-2 gap-0">
                 {/* Left Side - Image */}
                 <div className="relative h-[300px] md:h-auto overflow-hidden">
@@ -48,11 +48,11 @@ export default function HotProducts() {
                     priority
                     unoptimized
                   />
-                  <div className="absolute inset-0 bg-gradient-to-r from-[#0F1E37] via-transparent to-transparent opacity-80"></div>
+                  <div className="absolute inset-0 bg-linear-to-r from-[#0F1E37] via-transparent to-transparent opacity-80"></div>
                   
                   {/* Hot Badge */}
                   <div className="absolute top-6 left-6 z-10">
-                    <div className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#F59E0B] to-[#EF4444] rounded-full shadow-lg animate-bounce">
+                    <div className="flex items-center gap-2 px-4 py-2 bg-linear-to-r from-[#F59E0B] to-[#EF4444] rounded-full shadow-lg animate-bounce">
                       <Flame className="w-4 h-4 text-white" />
                       <span className="text-white font-bold text-sm">BEST SELLER</span>
                     </div>
@@ -112,7 +112,7 @@ export default function HotProducts() {
                       "Multi User & Cloud-based"
                     ].map((feature, index) => (
                       <div key={index} className="flex items-start gap-2">
-                        <CheckCircle2 className="w-4 h-4 text-[#10B981] flex-shrink-0 mt-0.5" />
+                        <CheckCircle2 className="w-4 h-4 text-[#10B981] shrink-0 mt-0.5" />
                         <span className="text-white/90 text-xs">{feature}</span>
                       </div>
                     ))}
@@ -122,7 +122,7 @@ export default function HotProducts() {
                   <div className="flex flex-col sm:flex-row gap-2">
                     <Button 
                       asChild
-                      className="bg-gradient-to-r from-[#F59E0B] to-[#EF4444] hover:from-[#F59E0B]/90 hover:to-[#EF4444]/90 text-white px-5 py-2.5 text-sm rounded-lg group/btn shadow-lg shadow-[#F59E0B]/30 hover:shadow-xl hover:shadow-[#F59E0B]/40 transition-all"
+                      className="bg-linear-to-r from-[#F59E0B] to-[#EF4444] hover:from-[#F59E0B]/90 hover:to-[#EF4444]/90 text-white px-5 py-2.5 text-sm rounded-lg group/btn shadow-lg shadow-[#F59E0B]/30 hover:shadow-xl hover:shadow-[#F59E0B]/40 transition-all"
                     >
                       <Link href="/blog/aplikasi-kasir-web-modern">
                         Pelajari Lebih Lanjut

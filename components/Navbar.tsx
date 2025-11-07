@@ -11,15 +11,24 @@ const navLinks = [
   { name: "Proyek", href: "#projects" },
   { name: "Tentang", href: "#about" },
   { name: "Layanan", href: "#services" },
-  { name: "Blog", href: "/blog" },
+  { name: "Harga", href: "#pricing" },
   { name: "Kontak", href: "#contact" },
+  { name: "Blog", href: "/blog" },
 ];
 
 export default function Navbar() {
   const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState("");
+  
+  // Derive active section from pathname instead of using effect
+  const getInitialActiveSection = () => {
+    if (pathname.startsWith('/blog')) return '/blog';
+    if (pathname === '/') return '#';
+    return '';
+  };
+  
+  const [activeSection, setActiveSection] = useState(getInitialActiveSection);
 
   useEffect(() => {
     // Check initial scroll position on mount
@@ -34,15 +43,6 @@ export default function Navbar() {
     window.addEventListener("scroll", checkScroll);
     return () => window.removeEventListener("scroll", checkScroll);
   }, []);
-
-  // Set active section based on pathname
-  useEffect(() => {
-    if (pathname.startsWith('/blog')) {
-      setActiveSection('/blog');
-    } else if (pathname === '/') {
-      setActiveSection('#');
-    }
-  }, [pathname]);
 
   useEffect(() => {
     // Only track scroll on homepage
@@ -78,7 +78,7 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-[999] transition-all duration-500 ${
+      className={`fixed top-0 left-0 right-0 z-999 transition-all duration-500 ${
         isScrolled || isMobileMenuOpen
           ? "bg-[#0A192F]/95 backdrop-blur-xl shadow-lg shadow-[#3B82F6]/5"
           : "bg-transparent"

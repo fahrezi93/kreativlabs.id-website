@@ -97,7 +97,7 @@ export default function Principles() {
 
         {/* Bottom Divider */}
         <div className="mt-16 flex items-center justify-center">
-          <div className="h-px w-32 bg-gradient-to-r from-transparent via-[#3B82F6] to-transparent"></div>
+          <div className="h-px w-32 bg-linear-to-r from-transparent via-[#3B82F6] to-transparent"></div>
         </div>
       </div>
     </section>

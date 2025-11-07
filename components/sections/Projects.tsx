@@ -20,7 +20,7 @@ export default function Projects() {
         <AnimatedSection animation="fade-up">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-              Our <span className="text-[#3B82F6]">Projects</span>
+              Proyek <span className="text-[#3B82F6]">Kami</span>
             </h2>
             <p className="text-white/70 text-lg max-w-2xl mx-auto">
               Beberapa project yang telah kami kerjakan dengan hasil yang memuaskan
@@ -45,10 +45,8 @@ export default function Projects() {
                     className="object-cover transition-transform duration-500 group-hover:scale-110"
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     loading="lazy"
-                    placeholder="blur"
-                    blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwA3gAA//9k="
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0F1E37] via-transparent to-transparent opacity-60"></div>
+                  <div className="absolute inset-0 bg-linear-to-t from-[#0F1E37] via-transparent to-transparent opacity-60"></div>
                   <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity z-10">
                     <div className="bg-[#3B82F6] p-2 rounded-full shadow-lg">
                       <ExternalLink className="w-5 h-5 text-white" />
