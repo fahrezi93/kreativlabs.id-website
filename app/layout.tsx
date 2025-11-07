@@ -10,13 +10,16 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://kreativlabs-id.vercel.app'),
+  metadataBase: new URL('https://kreativlabs.my.id'),
   title: "KreativLabs.id - Jasa Website & Desain Grafis Profesional Mulai 50rb",
   description:
     "Jasa pembuatan website dan desain grafis profesional (logo, poster, sosmed, packaging) dengan harga terjangkau mulai dari 50 ribu. Kualitas premium, harga bersahabat!",
   keywords:
     "jasa website, web development, desain grafis, desain logo, desain poster, desain sosmed, desain kemasan, jasa design murah, pembuatan website murah",
   authors: [{ name: "KreativLabs.id" }],
+  verification: {
+    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || "",
+  },
   icons: {
     icon: [
       { url: '/icon', type: 'image/png', sizes: '32x32' },

@@ -16,7 +16,7 @@ export default function OptimizedParticles({
   quantity = 50,
   ease = 80,
   staticity = 50,
-  color = "#3B82F6",
+  color = "#FFFFFF",
   size = 0.6,
   className = "absolute inset-0",
 }: OptimizedParticlesProps) {

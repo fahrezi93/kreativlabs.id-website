@@ -2,6 +2,8 @@
 
 import { Card } from "@/components/ui/card";
 import { Star } from "lucide-react";
+import { Particles } from "@/components/ui/shadcn-io/particles";
+import { useIsMobile } from "@/hooks/useIsMobile";
 import AnimatedSection from "@/components/AnimatedSection";
 import FadeInStagger from "@/components/FadeInStagger";
 
@@ -30,10 +32,24 @@ const testimonials = [
 ];
 
 export default function Testimonials() {
+  const isMobile = useIsMobile();
+  
   return (
     <section id="testimonials" className="relative py-24 bg-[#0A192F] overflow-hidden overflow-x-hidden w-full">
       {/* Lighting Effect */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-[#3B82F6] rounded-full blur-[120px] opacity-10"></div>
+      
+      {/* Particles - Desktop Only */}
+      {!isMobile && (
+        <Particles
+          className="absolute inset-0"
+          quantity={80}
+          ease={80}
+          staticity={50}
+          color="#FFFFFF"
+          size={0.6}
+        />
+      )}
 
       <div className="container mx-auto px-6 relative z-10">
         {/* Section Header */}

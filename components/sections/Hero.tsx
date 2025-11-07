@@ -2,8 +2,8 @@
 
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Sparkles, Code2, Palette } from "lucide-react";
-import { AuroraBackground } from "@/components/ui/shadcn-io/aurora-background";
 import { Particles } from "@/components/ui/shadcn-io/particles";
+import { BackgroundBeams } from "@/components/ui/shadcn-io/background-beams";
 import { useIsMobile } from "@/hooks/useIsMobile";
 import FadeInStagger from "@/components/FadeInStagger";
 import AnimatedSection from "@/components/AnimatedSection";
@@ -12,7 +12,13 @@ export default function Hero() {
   const isMobile = useIsMobile();
   
   return (
-    <AuroraBackground className="min-h-[85vh] pt-20">
+    <section className="relative min-h-[85vh] pt-20 bg-[#0A192F] overflow-hidden">
+      {/* Background Beams - Desktop Only */}
+      {!isMobile && <BackgroundBeams className="absolute inset-0" />}
+      
+      {/* Gradient overlay for better text readability */}
+      <div className="absolute inset-0 bg-gradient-to-b from-[#0A192F]/50 via-transparent to-[#0A192F]/80 pointer-events-none" />
+      
       <div className="relative z-10 container mx-auto px-6 py-16">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
@@ -134,10 +140,10 @@ export default function Hero() {
           quantity={100}
           ease={80}
           staticity={50}
-          color="#3B82F6"
+          color="#FFFFFF"
           size={0.8}
         />
       )}
-    </AuroraBackground>
+    </section>
   );
 }

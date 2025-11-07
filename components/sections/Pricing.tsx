@@ -99,7 +99,7 @@ export default function Pricing() {
               {(plan.popular || plan.badge) && (
                 <div className="absolute -top-4 left-1/2 -translate-x-1/2">
                   <div className={`text-white text-sm font-semibold px-4 py-1 rounded-full ${
-                    plan.popular ? "bg-[#3B82F6]" : "bg-gradient-to-r from-purple-500 to-pink-500"
+                    plan.popular ? "bg-[#3B82F6]" : "bg-linear-to-r from-purple-500 to-pink-500"
                   }`}>
                     {plan.badge || "Most Popular"}
                   </div>
@@ -115,7 +115,7 @@ export default function Pricing() {
                 {plan.originalPrice && (
                   <div className="mb-2">
                     <span className="text-white/40 line-through text-lg">Rp {plan.originalPrice}</span>
-                    <span className="ml-2 bg-red-500/20 text-red-400 text-xs px-2 py-1 rounded-full">Hemat 50%</span>
+                    <span className="ml-2 bg-red-500/20 text-red-400 text-xs px-2 py-1 rounded-full">Hemat 65%</span>
                   </div>
                 )}
                 <div className="flex items-baseline">
@@ -132,7 +132,7 @@ export default function Pricing() {
               <ul className="space-y-4 mb-8">
                 {plan.features.map((feature, idx) => (
                   <li key={idx} className="flex items-start">
-                    <div className="flex-shrink-0 w-5 h-5 bg-[#3B82F6]/20 rounded-full flex items-center justify-center mr-3 mt-0.5">
+                    <div className="shrink-0 w-5 h-5 bg-[#3B82F6]/20 rounded-full flex items-center justify-center mr-3 mt-0.5">
                       <Check className="w-3 h-3 text-[#3B82F6]" />
                     </div>
                     <span className="text-white/70 text-sm">{feature}</span>
