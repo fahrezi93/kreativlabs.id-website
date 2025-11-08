@@ -269,7 +269,7 @@ export default function BlogPostPage() {
                   <AnimatedSection animation="fade-up" delay={200}>
                     <div className="bg-gradient-to-br from-[#0F1E37] to-[#1E3A5F] border border-white/10 rounded-xl p-6">
                       <h3 className="text-xl font-bold text-white mb-3">
-                        Tertarik dengan Aplikasi Kasir Web?
+                        Tertarik dengan {post.title}?
                       </h3>
                       <p className="text-white/70 text-sm mb-4">
                         Dapatkan demo gratis dan konsultasi untuk kebutuhan bisnis Anda

@@ -8,46 +8,40 @@ import Image from "next/image";
 import Link from "next/link";
 
 const navLinks = [
-  { name: "Beranda", href: "#" },
-  { name: "Proyek", href: "#projects" },
-  { name: "Tentang", href: "#about" },
-  { name: "Layanan", href: "#services" },
-  { name: "Harga", href: "#pricing" },
-  { name: "Kontak", href: "#contact" },
-  { name: "Blog", href: "/blog" },
+  { name: "Home", href: "#" },
+  { name: "Projects", href: "#projects" },
+  { name: "About", href: "#about" },
+  { name: "Services", href: "#services" },
+  { name: "Pricing", href: "#pricing" },
+  { name: "Contact", href: "#contact" },
+  { name: "Blog", href: "/en/blog" },
 ];
 
-export default function Navbar() {
+export default function NavbarEN() {
   const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   
-  // Derive active section from pathname instead of using effect
   const getInitialActiveSection = () => {
-    if (pathname.startsWith('/blog')) return '/blog';
-    if (pathname === '/') return '#';
+    if (pathname.startsWith('/en/blog')) return '/en/blog';
+    if (pathname === '/en') return '#';
     return '';
   };
   
   const [activeSection, setActiveSection] = useState(getInitialActiveSection);
 
   useEffect(() => {
-    // Check initial scroll position on mount
     const checkScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
     
-    // Check immediately on mount
     checkScroll();
-
-    // Then add scroll listener
     window.addEventListener("scroll", checkScroll);
     return () => window.removeEventListener("scroll", checkScroll);
   }, []);
 
   useEffect(() => {
-    // Only track scroll on homepage
-    if (pathname !== '/') return;
+    if (pathname !== '/en') return;
 
     const handleScroll = () => {
       const sections = navLinks.map(link => link.href.replace('#', ''));
@@ -73,7 +67,7 @@ export default function Navbar() {
     };
 
     window.addEventListener('scroll', handleScroll);
-    handleScroll(); // Check on mount
+    handleScroll();
     return () => window.removeEventListener('scroll', handleScroll);
   }, [pathname]);
 
@@ -89,7 +83,7 @@ export default function Navbar() {
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-20 relative">
           {/* Logo - Left */}
-          <a href="#" className="flex items-center z-10">
+          <Link href="/en" className="flex items-center z-10">
             <Image 
               src="/logokreativ.png" 
               alt="KreativLabs.id" 
@@ -98,13 +92,13 @@ export default function Navbar() {
               className="h-10 w-auto"
               priority
             />
-          </a>
+          </Link>
 
           {/* Desktop Navigation - Centered */}
           <div className="hidden md:flex items-center space-x-8 absolute left-1/2 -translate-x-1/2">
             {navLinks.map((link) => {
               const isExternal = link.href.startsWith('/');
-              const href = isExternal ? link.href : (pathname !== '/' ? `/${link.href}` : link.href);
+              const href = isExternal ? link.href : (pathname !== '/en' ? `/en/${link.href}` : link.href);
               const isActive = activeSection === link.href || (link.href.startsWith('/') && pathname.startsWith(link.href));
               
               return (
@@ -129,14 +123,14 @@ export default function Navbar() {
           {/* Language Switcher & CTA - Right */}
           <div className="hidden md:flex items-center gap-3">
             <Link 
-              href="/en"
+              href="/"
               className="flex items-center gap-2 px-4 py-2 text-white/70 hover:text-[#3B82F6] transition-colors rounded-lg hover:bg-white/5"
             >
               <Globe className="w-4 h-4" />
-              <span className="text-sm">EN</span>
+              <span className="text-sm">ID</span>
             </Link>
             <Button asChild className="bg-[#3B82F6] hover:bg-[#3B82F6]/90 text-white rounded-full px-6">
-              <a href={pathname !== '/' ? '/#contact' : '#contact'}>Mulai Sekarang</a>
+              <a href={pathname !== '/en' ? '/en/#contact' : '#contact'}>Get Started</a>
             </Button>
           </div>
 
@@ -162,7 +156,7 @@ export default function Navbar() {
             <div className="flex flex-col space-y-1">
               {navLinks.map((link, index) => {
                 const isExternal = link.href.startsWith('/');
-                const href = isExternal ? link.href : (pathname !== '/' ? `/${link.href}` : link.href);
+                const href = isExternal ? link.href : (pathname !== '/en' ? `/en/${link.href}` : link.href);
                 const isActive = activeSection === link.href || (link.href.startsWith('/') && pathname.startsWith(link.href));
                 
                 return (
@@ -186,12 +180,12 @@ export default function Navbar() {
               
               {/* Language Switcher Mobile */}
               <Link 
-                href="/en"
+                href="/"
                 className="flex items-center gap-2 px-6 py-3 mx-2 text-white/70 hover:text-[#3B82F6] hover:bg-white/5 rounded-lg transition-all"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 <Globe className="w-4 h-4" />
-                <span className="text-base">English</span>
+                <span className="text-base">Bahasa Indonesia</span>
               </Link>
 
               <div className="px-4 pt-4 mt-2 border-t border-white/5">
@@ -199,7 +193,7 @@ export default function Navbar() {
                   asChild
                   className="bg-[#3B82F6] hover:bg-[#3B82F6]/90 text-white w-full rounded-full py-6 text-base font-medium shadow-lg shadow-[#3B82F6]/30"
                 >
-                  <a href={pathname !== '/' ? '/#contact' : '#contact'} onClick={() => setIsMobileMenuOpen(false)}>Mulai Sekarang</a>
+                  <a href={pathname !== '/en' ? '/en/#contact' : '#contact'} onClick={() => setIsMobileMenuOpen(false)}>Get Started</a>
                 </Button>
               </div>
             </div>

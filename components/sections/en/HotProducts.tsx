@@ -8,7 +8,7 @@ import FadeInStagger from "@/components/FadeInStagger";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function HotProducts() {
+export default function HotProductsEN() {
   return (
     <section id="hot-products" className="relative py-24 bg-linear-to-b from-[#0A192F] to-[#0F1E37] overflow-hidden">
       {/* Animated Background Elements */}
@@ -24,10 +24,10 @@ export default function HotProducts() {
               <span className="text-sm text-white font-semibold">HOT PRODUCT 🔥</span>
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-              Produk <span className="text-transparent bg-clip-text bg-linear-to-r from-[#F59E0B] to-[#EF4444]">Unggulan</span> Kami
+              Our <span className="text-transparent bg-clip-text bg-linear-to-r from-[#F59E0B] to-[#EF4444]">Featured</span> Product
             </h2>
             <p className="text-white/70 text-lg max-w-2xl mx-auto">
-              Solusi terbaik untuk bisnis Anda dengan teknologi terkini
+              The best solution for your business with cutting-edge technology
             </p>
           </div>
         </AnimatedSection>
@@ -41,7 +41,7 @@ export default function HotProducts() {
                 <div className="relative h-[300px] md:h-auto overflow-hidden">
                   <Image
                     src="/tiptopframe.png"
-                    alt="Aplikasi Kasir Web Modern"
+                    alt="Modern Web POS Application"
                     fill
                     className="object-cover transition-transform duration-700 group-hover:scale-110"
                     sizes="(max-width: 768px) 100vw, 50vw"
@@ -63,21 +63,21 @@ export default function HotProducts() {
                       <div className="bg-black/40 backdrop-blur-md rounded-lg p-3 border border-white/10">
                         <div className="flex items-center gap-2 mb-1">
                           <TrendingUp className="w-4 h-4 text-[#10B981]" />
-                          <span className="text-xs text-white/70">Efisiensi</span>
+                          <span className="text-xs text-white/70">Efficiency</span>
                         </div>
                         <p className="text-white font-bold text-lg">70%</p>
                       </div>
                       <div className="bg-black/40 backdrop-blur-md rounded-lg p-3 border border-white/10">
                         <div className="flex items-center gap-2 mb-1">
                           <Zap className="w-4 h-4 text-[#F59E0B]" />
-                          <span className="text-xs text-white/70">Akurasi</span>
+                          <span className="text-xs text-white/70">Accuracy</span>
                         </div>
                         <p className="text-white font-bold text-lg">90%</p>
                       </div>
                       <div className="bg-black/40 backdrop-blur-md rounded-lg p-3 border border-white/10">
                         <div className="flex items-center gap-2 mb-1">
                           <ShoppingCart className="w-4 h-4 text-[#3B82F6]" />
-                          <span className="text-xs text-white/70">Hemat</span>
+                          <span className="text-xs text-white/70">Savings</span>
                         </div>
                         <p className="text-white font-bold text-lg">60%</p>
                       </div>
@@ -94,20 +94,20 @@ export default function HotProducts() {
                   </div>
 
                   <h3 className="text-2xl md:text-3xl font-bold text-white mb-3 group-hover:text-[#F59E0B] transition-colors">
-                    Aplikasi Kasir Web Modern
+                    Modern Web POS Application
                   </h3>
 
                   <p className="text-white/80 text-sm mb-5 leading-relaxed">
-                    Sistem kasir berbasis web yang powerful untuk mengelola bisnis retail Anda. 
-                    Akses dari mana saja, kapan saja dengan fitur lengkap dan interface yang mudah digunakan.
+                    A powerful web-based POS system to manage your retail business. 
+                    Access from anywhere, anytime with complete features and an easy-to-use interface.
                   </p>
 
                   {/* Key Features */}
                   <div className="space-y-2 mb-6">
                     {[
-                      "Point of Sale (POS) Modern & Cepat",
-                      "Manajemen Stok Real-time",
-                      "Laporan Penjualan & Analytics",
+                      "Modern & Fast Point of Sale (POS)",
+                      "Real-time Stock Management",
+                      "Sales Reports & Analytics",
                       "Multi User & Cloud-based"
                     ].map((feature, index) => (
                       <div key={index} className="flex items-start gap-2">
@@ -123,8 +123,8 @@ export default function HotProducts() {
                       asChild
                       className="bg-linear-to-r from-[#F59E0B] to-[#EF4444] hover:from-[#F59E0B]/90 hover:to-[#EF4444]/90 text-white px-5 py-2.5 text-sm rounded-lg group/btn shadow-lg shadow-[#F59E0B]/30 hover:shadow-xl hover:shadow-[#F59E0B]/40 transition-all"
                     >
-                      <Link href="/blog/aplikasi-kasir-web-modern">
-                        Pelajari Lebih Lanjut
+                      <Link href="/en/blog/modern-web-pos-application">
+                        Learn More
                         <ArrowRight className="ml-2 h-4 w-4 group-hover/btn:translate-x-1 transition-transform" />
                       </Link>
                     </Button>
@@ -133,7 +133,7 @@ export default function HotProducts() {
                       variant="outline" 
                       className="border-2 border-[#3B82F6]/50 text-white hover:bg-[#3B82F6]/10 hover:border-[#3B82F6] px-5 py-2.5 text-sm rounded-lg backdrop-blur-sm transition-all"
                     >
-                      <a href="#contact">Hubungi Kami</a>
+                      <a href="#contact">Contact Us</a>
                     </Button>
                   </div>
                 </div>
@@ -146,7 +146,7 @@ export default function HotProducts() {
         <AnimatedSection animation="fade-up" delay={200}>
           <div className="mt-12 text-center">
             <p className="text-white/60 text-sm mb-4">
-              Tertarik dengan produk lainnya?
+              Interested in other products?
             </p>
             <Button 
               asChild
@@ -154,7 +154,7 @@ export default function HotProducts() {
               className="text-[#3B82F6] hover:text-[#3B82F6]/80 hover:bg-[#3B82F6]/10"
             >
               <a href="#projects">
-                Lihat Semua Produk
+                View All Products
                 <ArrowRight className="ml-2 h-4 w-4" />
               </a>
             </Button>

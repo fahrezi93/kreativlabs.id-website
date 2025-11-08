@@ -2,6 +2,7 @@
 
 import { Instagram, Mail, Github } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 // TikTok Icon Component
 const TikTokIcon = ({ className }: { className?: string }) => (
@@ -40,25 +41,25 @@ const footerLinks = {
     { name: "Portfolio", href: "#projects" },
     { name: "FAQ", href: "#faq" },
     { name: "Contact", href: "#contact" },
-    { name: "Blog", href: "#blog" },
+    { name: "Blog", href: "/en/blog" },
   ],
   services: [
     { name: "Landing Page", href: "#services" },
     { name: "Web Development", href: "#services" },
     { name: "Fullstack Development", href: "#services" },
     { name: "Company Profile", href: "#services" },
-    { name: "Desain Grafis", href: "#services" },
-    { name: "Desain Sosial Media", href: "#services" },
-    { name: "Desain Flyer & Poster", href: "#services" },
+    { name: "Graphic Design", href: "#services" },
+    { name: "Social Media Design", href: "#services" },
+    { name: "Flyer & Poster Design", href: "#services" },
   ],
   legal: [
-    { name: "Privacy Policy", href: "/legal/privacy-policy" },
-    { name: "Terms of Service", href: "/legal/terms-of-service" },
-    { name: "Cookie Policy", href: "/legal/cookie-policy" },
+    { name: "Privacy Policy", href: "/en/legal/privacy-policy" },
+    { name: "Terms of Service", href: "/en/legal/terms-of-service" },
+    { name: "Cookie Policy", href: "/en/legal/cookie-policy" },
   ],
 };
 
-export default function Footer() {
+export default function FooterEN() {
   return (
     <footer className="relative bg-[#0A192F] border-t border-white/10 overflow-hidden overflow-x-hidden w-full">
       {/* Lighting Effect */}
@@ -69,16 +70,18 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <div className="mb-6">
-              <Image 
-                src="/logokreativ.png" 
-                alt="KreativLabs.id" 
-                width={80} 
-                height={80}
-                className="h-20 w-auto"
-              />
+              <Link href="/en">
+                <Image 
+                  src="/logokreativ.png" 
+                  alt="KreativLabs.id" 
+                  width={80} 
+                  height={80}
+                  className="h-20 w-auto"
+                />
+              </Link>
             </div>
             <p className="text-white/70 text-sm mb-6 leading-relaxed">
-              Solusi digital modern untuk bisnis Anda. Kami menciptakan website dan design yang menarik, fungsional, dan menghasilkan konversi.
+              Modern digital solutions for your business. We create attractive, functional websites and designs that generate conversions.
             </p>
             {/* Social Links */}
             <div className="flex space-x-4">
@@ -140,12 +143,12 @@ export default function Footer() {
             <ul className="space-y-3">
               {footerLinks.legal.map((link, index) => (
                 <li key={index}>
-                  <a
+                  <Link
                     href={link.href}
                     className="text-white/70 hover:text-[#3B82F6] text-sm transition-colors"
                   >
                     {link.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
