@@ -9,9 +9,9 @@ import FadeInStagger from "@/components/FadeInStagger";
 
 const testimonials = [
   {
-    name: "Budi Santoso",
-    role: "CEO, TechStart Indonesia",
-    content: "KreativLabs.id sangat profesional dalam mengerjakan website perusahaan kami. Hasilnya melebihi ekspektasi!",
+    name: "Pak Alex",
+    role: "UMKM Martabak & Terang Bulan Tip Top",
+    content: "Aplikasi nya sangat membantu untuk mempermudah bisnis saya",
     rating: 5,
     image: "/api/placeholder/80/80",
   },

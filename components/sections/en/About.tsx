@@ -1,27 +1,7 @@
 "use client";
 
-import { Users, Target, Award, Code2, Palette, Zap } from "lucide-react";
 import OptimizedParticles from "@/components/OptimizedParticles";
 import AnimatedSection from "@/components/AnimatedSection";
-import Image from "next/image";
-
-const stats = [
-  {
-    icon: Users,
-    value: "10+",
-    label: "Happy Clients",
-  },
-  {
-    icon: Target,
-    value: "10+",
-    label: "Projects Completed",
-  },
-  {
-    icon: Award,
-    value: "2+",
-    label: "Months Experience",
-  },
-];
 
 export default function AboutEN() {
   return (
@@ -30,82 +10,84 @@ export default function AboutEN() {
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#3B82F6] rounded-full blur-[120px] opacity-10"></div>
 
       <div className="container mx-auto px-6 relative z-10">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left Content */}
             <AnimatedSection animation="fade-right">
-              <div>
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                About <span className="text-[#3B82F6]">Us</span>
-              </h2>
-              <p className="text-white/70 text-lg mb-6 leading-relaxed">
-                KreativLabs.id is a digital agency focused on creating modern, minimalist, and professional websites and designs.
-              </p>
-              <p className="text-white/70 text-lg mb-8 leading-relaxed">
-                We are committed to providing the best digital solutions that are not only visually appealing but also functional and generate high conversions for your business.
-              </p>
+              <div className="relative">
+                {/* Decorative Background Elements */}
+                <div className="absolute -top-20 -left-20 w-64 h-64 bg-[#3B82F6]/5 rounded-full blur-3xl"></div>
+                <div className="absolute top-40 -right-10 w-40 h-40 bg-[#3B82F6]/10 rounded-full blur-2xl"></div>
+                
+                <div className="relative space-y-6">
 
-              {/* Stats */}
-              <div className="grid grid-cols-3 gap-6">
-                {stats.map((stat, index) => {
-                  const Icon = stat.icon;
-                  return (
-                    <div key={index} className="text-center">
-                      <div className="inline-flex items-center justify-center w-12 h-12 bg-[#3B82F6]/10 rounded-lg mb-3">
-                        <Icon className="w-6 h-6 text-[#3B82F6]" />
-                      </div>
-                      <div className="text-2xl font-bold text-white mb-1">
-                        {stat.value}
-                      </div>
-                      <div className="text-white/60 text-sm">
-                        {stat.label}
-                      </div>
+                  {/* Main Heading with gradient accent */}
+                  <div className="space-y-3">
+                    <h2 className="text-4xl md:text-5xl font-bold leading-tight">
+                      <span className="text-white">About</span>
+                      <br />
+                      <span className="bg-gradient-to-r from-[#3B82F6] to-[#60A5FA] bg-clip-text text-transparent">
+                        KreativLabs
+                      </span>
+                    </h2>
+                    <div className="h-1 w-20 bg-gradient-to-r from-[#3B82F6] to-transparent rounded-full"></div>
+                  </div>
+
+                  {/* Image Section */}
+                  <div className="relative pt-4">
+                    <div className="relative aspect-[3/2] max-w-lg rounded-2xl overflow-hidden border-2 border-[#3B82F6]/30 shadow-2xl shadow-[#3B82F6]/20">
+                      <img
+                        src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&h=600&fit=crop&q=80"
+                        alt="KreativLabs Team"
+                        className="w-full h-full object-cover"
+                      />
+                      {/* Overlay Gradient */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-[#0A192F]/60 via-transparent to-transparent"></div>
                     </div>
-                  );
-                })}
-              </div>
+                  </div>
+
+                  {/* Additional decorative element */}
+                  <div className="flex items-center gap-3 pt-4">
+                    <div className="flex gap-2">
+                      <div className="w-2 h-2 rounded-full bg-[#3B82F6] animate-pulse"></div>
+                      <div className="w-2 h-2 rounded-full bg-[#3B82F6]/60 animate-pulse" style={{animationDelay: '0.2s'}}></div>
+                      <div className="w-2 h-2 rounded-full bg-[#3B82F6]/30 animate-pulse" style={{animationDelay: '0.4s'}}></div>
+                    </div>
+                    <span className="text-white/40 text-xs font-medium">Trusted Digital Partner</span>
+                  </div>
+                </div>
               </div>
             </AnimatedSection>
 
-            {/* Right Content - Visual Element */}
+            {/* Right Content - Description */}
             <AnimatedSection animation="fade-left" delay={200}>
-              <div className="relative">
-                <div className="relative aspect-square max-w-md mx-auto">
-                  {/* Decorative Circles */}
-                  <div className="absolute inset-0 border-2 border-[#3B82F6]/20 rounded-full animate-pulse"></div>
-                  <div className="absolute inset-4 border-2 border-[#3B82F6]/30 rounded-full"></div>
-                  
-                  {/* Main Image Container */}
-                  <div className="absolute inset-8 rounded-full overflow-hidden border-4 border-[#3B82F6]/40 shadow-2xl shadow-[#3B82F6]/20">
-                    <Image
-                      src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&h=800&fit=crop&q=80"
-                      alt="KreativLabs Team"
-                      fill
-                      className="object-cover"
-                      sizes="(max-width: 768px) 100vw, 400px"
-                      loading="lazy"
-                    />
-                    {/* Overlay Gradient */}
-                    <div className="absolute inset-0 bg-linear-to-br from-[#3B82F6]/20 via-transparent to-[#0A192F]/40"></div>
-                  </div>
+              <div className="space-y-6">
+                {/* Founded Info */}
+                <div className="space-y-4">
+                  <p className="text-white/80 text-base leading-relaxed">
+                    Founded in <span className="text-white font-semibold">2023</span>, KreativLabs.id emerged with a vision to become a <span className="text-white font-semibold">trusted digital partner</span> that empowers businesses in Indonesia to grow and excel through innovative and results-oriented technology solutions.
+                  </p>
+                </div>
 
-                  {/* Floating Icon Cards */}
-                  <div className="absolute -top-4 -right-4 w-20 h-20 bg-[#0F1E37] rounded-2xl border-2 border-[#3B82F6]/40 flex items-center justify-center shadow-xl shadow-[#3B82F6]/20 animate-bounce" style={{animationDuration: '3s'}}>
-                    <Code2 className="w-10 h-10 text-[#3B82F6]" />
-                  </div>
-                  
-                  <div className="absolute -bottom-4 -left-4 w-20 h-20 bg-[#0F1E37] rounded-2xl border-2 border-[#3B82F6]/40 flex items-center justify-center shadow-xl shadow-[#3B82F6]/20 animate-bounce" style={{animationDuration: '3.5s', animationDelay: '0.5s'}}>
-                    <Palette className="w-10 h-10 text-[#3B82F6]" />
-                  </div>
-                  
-                  <div className="absolute top-1/2 -translate-y-1/2 -right-6 w-16 h-16 bg-[#0F1E37] rounded-xl border-2 border-[#3B82F6]/40 flex items-center justify-center shadow-xl shadow-[#3B82F6]/20 animate-bounce" style={{animationDuration: '4s', animationDelay: '1s'}}>
-                    <Zap className="w-8 h-8 text-[#3B82F6]" />
-                  </div>
+                {/* Premium Solutions */}
+                <div className="space-y-4">
+                  <p className="text-white/80 text-base leading-relaxed">
+                    We develop custom <span className="text-white font-semibold">websites, mobile applications, and e-commerce platforms</span> with the highest coding standards, optimal performance with <span className="text-white font-semibold">Fast Loading</span>, and cutting-edge security that delivers premium digital experiences for your business.
+                  </p>
+                </div>
 
-                  {/* Glow Effect */}
-                  <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                    <div className="w-48 h-48 bg-[#3B82F6] rounded-full blur-3xl opacity-20"></div>
-                  </div>
+                {/* UX & Partnership */}
+                <div className="space-y-4">
+                  <p className="text-white/80 text-base leading-relaxed">
+                    By implementing <span className="text-white font-semibold">intuitive, modern, and minimalist UI/UX design</span>, we maximize user engagement and drive conversions. We build transparent, communicative, and efficient workflows with <span className="text-white font-semibold">Fast Delivery</span>, positioning clients as part of the team.
+                  </p>
+                </div>
+
+                {/* Impact & Innovation */}
+                <div className="space-y-4">
+                  <p className="text-white/80 text-base leading-relaxed">
+                    We implement <span className="text-white font-semibold">SEO strategies and digital best practices</span> to ensure every solution delivers measurable results for client business growth. Consistently adopting the latest technologies and developing team expertise to provide relevant and <span className="text-white font-semibold">future-proof</span> solutions.
+                  </p>
                 </div>
               </div>
             </AnimatedSection>

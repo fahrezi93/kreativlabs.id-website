@@ -170,17 +170,17 @@ export default function BlogPostPage() {
                               },
                               ul: { 
                                 component: ({ children, ...props }) => (
-                                  <ul {...props} className="list-disc list-inside text-white/80 mb-4 space-y-2">{children}</ul>
+                                  <ul {...props} className="list-disc pl-6 text-white/80 mb-6 space-y-3">{children}</ul>
                                 )
                               },
                               ol: { 
                                 component: ({ children, ...props }) => (
-                                  <ol {...props} className="list-decimal list-inside text-white/80 mb-4 space-y-2">{children}</ol>
+                                  <ol {...props} className="list-decimal pl-6 text-white/80 mb-6 space-y-3">{children}</ol>
                                 )
                               },
                               li: { 
                                 component: ({ children, ...props }) => (
-                                  <li {...props} className="text-white/80 text-lg">{children}</li>
+                                  <li {...props} className="text-white/80 text-lg leading-relaxed pl-2">{children}</li>
                                 )
                               },
                               strong: { 
